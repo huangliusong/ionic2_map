@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+    </ion-buttons>
+    <ion-title>注册</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div>
+    <ion-item style="text-align: center;">
+      <img src="{{user.personImg}}" class="person-img" (click)="checkPhoto()"/>
+    </ion-item>
+    </div>
+    <ion-item>
+      <ion-label>登录名</ion-label>
+      <ion-input type="text" [(ngModel)]="user.username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>密码</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>性别</ion-label>
+      <ion-select [(ngModel)]="user.sex">
+        <ion-option value="0">男</ion-option>
+        <ion-option value="1">女</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>生日</ion-label>
+      <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY年MM月DD日" [(ngModel)]="user.birthDay"></ion-datetime>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button ion-button full color="Secondary" (click)="doRegister()">立即注册</button>
+  </div>
+<ion-list>
+  <ion-card>
+  (点击[注册]按钮代表您已经阅读并同意网站协议)
+  </ion-card>
+  </ion-list>
+</ion-content>
