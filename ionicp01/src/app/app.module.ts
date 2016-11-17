@@ -8,6 +8,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import {Register} from '../pages/register/register';
 import {Usercenter} from '../pages/usercenter/usercenter';
 import {BaiduMap} from '../pages/baidu-map/baidu-map';
+import {ComtactDetail} from '../pages/comtact-detail/comtact-detail';
+import {HomeDetail} from '../pages/home-detail/home-detail';
 @NgModule({
   declarations: [
     MyApp,
@@ -17,7 +19,9 @@ import {BaiduMap} from '../pages/baidu-map/baidu-map';
     TabsPage,
     Register,
     Usercenter,
-    BaiduMap
+    BaiduMap,
+    ComtactDetail,
+    HomeDetail
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -31,7 +35,9 @@ import {BaiduMap} from '../pages/baidu-map/baidu-map';
     TabsPage,
     Register,
     Usercenter,
-    BaiduMap
+    BaiduMap,
+    ComtactDetail,
+    HomeDetail
   ],
   providers: []
 })

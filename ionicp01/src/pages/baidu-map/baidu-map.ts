@@ -14,7 +14,8 @@ declare var fc;
 })
 export class BaiduMap {
  @ViewChild('container') mapElement: ElementRef;
-  container: any;
+ @ViewChild('tip') tipElement: ElementRef;
+  tip: any;
   constructor(public navCtrl: NavController) {}
 
   ionViewDidLoad() {
@@ -26,17 +27,10 @@ loadMap() {
     var map = new AMap.Map(this.mapElement.nativeElement);          // 创建地图实例
     map.setZoom(10);
     map.setCenter([116.39,39.9]);
+    map.centerAndZoom(new AMap.Point(113.402364,23.056676), 16); //显示中心
     var marker = new AMap.Marker();
     marker.setMap(map);
-    var pt = new AMap.Point(116.404, 39.915);
-    var myIcon = new AMap.Icon("http://developer.baidu.com/map/jsdemo/img/fox.gif", new AMap.Size(300, 157));
-    var marker2 = new AMap.Marker(pt, { icon: myIcon });  // 创建标注
-    map.addOverlay(marker2);              // 将标注添加到地图中+
-    //在对象初始化之后进行
-var placeSearch= new AMap.PlaceSearch();
-placeSearch.setType('餐饮服务');
-placeSearch.setCity('010');
-  placeSearch.search('方恒', function(status, result) {
-        });
+     
+
   }
 }
